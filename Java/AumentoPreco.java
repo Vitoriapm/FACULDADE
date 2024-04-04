@@ -1,3 +1,5 @@
+/* Escreva um programa que calcule o preço final de um item de mercado que tenha sofrido um aumento de 25%. */
+
 import java.util.Scanner;
 
 public class AumentoPreco{
