@@ -15,16 +15,18 @@ public class PesoIdeal{
         String sexo = sc.nextLine();
         
         System.out.print("Digite sua altura (em metros): ");
-        double h = sc.nextDouble();
+        double altura = sc.nextDouble();
+        
+        double pIdeal = 0;
         
         if(sexo.equalsIgnoreCase("M")){
-            double pIdeal = (72.7*h) - 58;
-            System.out.print("Seu peso ideal é: " + String.format("%.2f",pIdeal) + "kg");
+            pIdeal = (72.7*altura) - 58;
         }else if(sexo.equalsIgnoreCase("F")){
-            double pIdeal = (62.1*h) - 44.7;
-            System.out.print("Seu peso ideal é: " + String.format("%.2f",pIdeal) + "kg");
+            pIdeal = (62.1*altura) - 44.7;
         }else{
             System.out.print("Digite o gênero novamente (M ou F)!");
         }
+        
+        System.out.print("Seu peso ideal é: " + String.format("%.2f",pIdeal) + "kg");
     }
 }
