@@ -1,5 +1,5 @@
 /* Construa um programa que leia, na entrada, os valores da base e da altura de um triângulo,
-    e retone, na saída, o valor da área do triângulo. */
+e retone, na saída, o valor da área do triângulo. */
 
 import java.util.Scanner;
 
