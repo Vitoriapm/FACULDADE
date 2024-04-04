@@ -1,3 +1,6 @@
+/* Escreva um algoritmo para calcular e imprimir o volume de uma esfera de raio R que é fornecido pelo usuário.
+O volume de uma esfera é dado pela fómula: 4*(pi*R³)/3 */
+
 import java.util.Scanner;
 
 public class VolumeEsfera{
