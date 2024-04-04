@@ -1,3 +1,6 @@
+/* Receba dois número de entrada (a e b) e compare seus tamanhos, exibindo na saída: 
+"a é MAIOR do que b", "a é MENOR do que b" ou "a é IGUAL a b". */
+
 import java.util.Scanner;
 
 public class MaiorMenorIgual{
