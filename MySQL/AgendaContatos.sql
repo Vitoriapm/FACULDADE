@@ -1,4 +1,4 @@
-CREATE DATABASE Agenda;
+CREATE DATABASE agenda;
 
 
 USE agenda;
