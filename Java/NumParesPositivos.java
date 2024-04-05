@@ -4,7 +4,7 @@ No final, exiba a soma dos números pares inseridos. */
 
 import java.util.Scanner;
 
-public class Main{
+public class NumParesPositivos{
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         
