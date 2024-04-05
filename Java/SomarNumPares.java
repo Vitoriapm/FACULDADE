@@ -7,7 +7,7 @@ public class SomarNumPares{
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("---------SOMA DOS NÚMEROS PARES---------");
+        System.out.println("---------SOMA DE NÚMEROS PARES---------");
         
         double num, soma = 0;
         
