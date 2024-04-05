@@ -1,3 +1,7 @@
+/* Escreva um programa que solicite ao usuário que insira uma senha.
+Utilize o laço while para continuar solicitando a senha até que o usuário insira a senha correta.
+Após inserir a senha correta, exiba uma mensagem de boas-vindas. */
+
 import java.util.Scanner;
 
 public class SenhaCorreta{
