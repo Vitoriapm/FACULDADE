@@ -10,12 +10,12 @@ public class AreaTriangulo{
         System.out.println("---------ÁREA DO TRIÂNGULO---------");
       
         System.out.print("Digite a base do triângulo: ");
-        int base = sc.nextInt();
+        double base = sc.nextInt();
       
         System.out.print("Digite a altura do triângulo: ");
-        int altura = sc.nextInt();
+        double altura = sc.nextInt();
         
-        int area = (base*altura)/2;
+        double area = (base*altura)/2;
         
         System.out.print("A área do triângulo é: " + area);
     }
