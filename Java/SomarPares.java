@@ -2,7 +2,7 @@
 
 public class SomarPares{
     public static void main(String[]args){
-        System.out.println("---------SOMA DE NÚMEROS PARES---------");
+        System.out.println("---------SOMA DOS NÚMEROS PARES---------");
         
         int soma = 0;
         
