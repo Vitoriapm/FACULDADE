@@ -1,7 +1,11 @@
-package crud;
+package programa;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import metodos.Cadastrar;
+import metodos.Deletar;
+import metodos.Editar;
+import metodos.Exibir;
 
 public class Principal {
 	public static void main(String[]args) {
