@@ -2,14 +2,13 @@ package metodos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Scanner;
+import java.sql.Statement;
 
-public class Editar {
+public class Exibir{
 
-	public static void editar() throws SQLException{
-		Scanner sc = new Scanner(System.in);
+	public static void exibirDados() throws SQLException{
 	
 		//url de conexao
 		String url = "jdbc:mysql://localhost:3306/crud";
@@ -19,43 +18,22 @@ public class Editar {
 		Connection conexao = null;
 		conexao = DriverManager.getConnection(url, user, password);
 		
-		//código mysql para update
-		String sql = "UPDATE empresa "
-				+ "SET cnpj = ?, nome = ?, endereco = ?, email = ?"
-				+ "WHERE cnpj = ?";
-	
-		PreparedStatement st = conexao.prepareStatement(sql);
+		//código mysql para inserção
+		String sql = "SELECT * FROM empresa";
+
+		Statement st = conexao.createStatement();
+		ResultSet rs = st.executeQuery(sql);
 		
-		//atualizar os valores
-		System.out.println("Qual o CNPJ da empresa que você deseja atualizar? ");
-		String escolhaCnpj = sc.nextLine();
-		
-		System.out.println("CNPJ: ");
-		String cnpj = sc.nextLine();
-		
-		System.out.println("Nome: ");
-		String nome = sc.nextLine();
-		
-		System.out.println("Endereço: ");
-		String endereco = sc.nextLine();
-		
-		System.out.println("E-mail: ");
-		String email = sc.nextLine();
-		
-		
-		//adicionar os valores no banco
-		st.setString(1, cnpj);
-		st.setString(2, nome);
-		st.setString(3, endereco);
-		st.setString(4, email);
-		st.setString(5, escolhaCnpj);
-		st.executeUpdate();
-		
-		System.out.println("Os dados foram atualizados com sucesso!");
+		System.out.println("--------------EMPRESAS--------------");
+		while(rs.next()) {
+			System.out.println("[CNPJ: " + rs.getString("cnpj" ) 
+				+ ", Nome: " + rs.getString("nome") 
+				+ ", Endereço: " + rs.getString("endereco") 
+				+ ", E-mail: " + rs.getString("email") + "]");
+			System.out.println(" ");
+		}
 		
 		conexao.close();
-		sc.close();
+		
 	}
-	
-	
 }
